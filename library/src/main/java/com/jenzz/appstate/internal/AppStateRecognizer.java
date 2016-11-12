@@ -86,7 +86,9 @@ public final class AppStateRecognizer {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-      onAppDidEnterBackground();
+      if (appState == FOREGROUND) {
+        onAppDidEnterBackground();
+      }
     }
   }
 }
