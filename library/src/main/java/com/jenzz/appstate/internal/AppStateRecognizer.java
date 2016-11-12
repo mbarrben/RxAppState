@@ -40,6 +40,7 @@ public final class AppStateRecognizer {
   public void stop(@NonNull Application app) {
     app.unregisterActivityLifecycleCallbacks(activityStartedCallback);
     app.unregisterComponentCallbacks(uiHiddenCallback);
+    app.unregisterReceiver(screenOffBroadcastReceiver);
   }
 
   @NonNull
